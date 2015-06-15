@@ -1,0 +1,12 @@
+#I put in to get git in prompt
+export GITAWAREPROMPT=~/.bash/git-aware-prompt
+source $GITAWAREPROMPT/main.sh
+
+#i put this here for git auto complete
+if [ -f ~/.bash/.git-completion.bash ]; then
+  . ~/.bash/.git-completion.bash
+fi
+
+
+export PS1="\u@\h\n \[$txtylw\]\w \[$txtcyn\]\n\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+export SUDO_PS1="\[$bakred\]\u@\h\[$txtrst\] \w\$ "
